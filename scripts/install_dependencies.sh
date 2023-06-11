@@ -1,4 +1,6 @@
 #!/bin/bash
-if ! [ -x "$(command -v httpd)" ]; then yum install -y httpd >&2;   exit 1; fi # install apache if not already installed
-systemctl start httpd
-systemctl enable httpd
+if ! [ -x "$(command -v httpd)" ]; then 
+yum install -y httpd >&2
+fi # install apache if not already installed
+
+yum install -y git php php-mysqlnd mariadb105 mariadb105-server
