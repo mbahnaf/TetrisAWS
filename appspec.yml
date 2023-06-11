@@ -4,6 +4,9 @@ files:
   - source: /
     destination: /var/www/html
     overwrite: true
+  - source: /database.sql
+    destination: /tmp/
+    overwrite: true
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
