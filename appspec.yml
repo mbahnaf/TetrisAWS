@@ -6,7 +6,7 @@ files:
     overwrite: true
   - source: /database.sql
     destination: /tmp/
-    overwrite: true
+file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
